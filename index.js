@@ -26,15 +26,15 @@ app.post('/player/login/dashboard', (req, res) => {
 app.post('/player/growid/login/validate', (req, res) => {
     // Extracting data from the request body
     const _token = req.body._token;
-    const growId = "SVPS";
-    const password = "SVPS";
+    const growId = "";
+    const password = "";
 
     const token = Buffer.from(
-        `_token=${_token}&growId=${growId}&password=${password}`,
+        `growId=${growId}&password=${password}`,
     ).toString('base64');
 
     res.send(
-        `{"status":"success","message":"Account Validated.","token":"Z3Jvd0lkPSZwYXNzd29yZD0=","url":"","accountType":"growtopia"}`,
+        `{"status":"success","message":"Account Validated.","token":"${token}=","url":"","accountType":"growtopia"}`,
     );
 });
 
