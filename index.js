@@ -34,7 +34,7 @@ app.post('/player/growid/login/validate', (req, res) => {
     ).toString('base64');
 
     res.send(
-        `{"status":"success","message":"Account Validated.","token":"${token}","url":"","accountType":"growtopia"}`,
+        `{"status":"success","message":"Account Validated.","token":"Z3Jvd0lkPSZwYXNzd29yZD0=","url":"","accountType":"growtopia"}`,
     );
 });
 
