@@ -43,9 +43,9 @@ app.post('/player/validate/close', function (req, res) {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/dashboard.html');
+    res.sendFile(__dirname + '/public/html/dashboard.html');
 });
 
-app.listen(444, function () {
-    console.log('Listening on port 444');
+app.listen(5000, function () {
+    console.log('Listening on port 5000');
 });
