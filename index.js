@@ -26,8 +26,8 @@ app.post('/player/login/dashboard', (req, res) => {
 app.post('/player/growid/login/validate', (req, res) => {
     // Extracting data from the request body
     const _token = req.body._token;
-    const growId = "";
-    const password = "";
+    const growId = "SVPS";
+    const password = "SVPS";
 
     const token = Buffer.from(
         `_token=${_token}&growId=${growId}&password=${password}`,
