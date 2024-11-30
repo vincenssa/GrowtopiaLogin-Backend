@@ -19,18 +19,12 @@ app.use(function (req, res, next) {
 
 app.use(express.json());
 
-app.post('/player/login/dashboard', (req, res) => {
-    const tData = {};
-    try {
-        const uData = JSON.stringify(req.body).split('"')[1].split('\\n'); const uName = uData[0].split('|'); const uPass = uData[1].split('|');
-        for (let i = 0; i < uData.length - 1; i++) { const d = uData[i].split('|'); tData[d[0]] = d[1]; }
-        if (uName[1] && uPass[1]) { res.redirect('/player/growid/login/validate'); }
-    } catch (why) { console.log(`Warning: ${why}`); }
+app.all('/player/login/dashboard', (req, res) => {
 
     res.sendFile(__dirname + '/public/html/dashboard.html');
 });
 
-app.post('/player/growid/login/validate', (req, res) => {
+app.all('/player/growid/login/validate', (req, res) => {
     // Extracting data from the request body
     const _token = req.body._token;
     const growId = "";
@@ -45,17 +39,11 @@ app.post('/player/growid/login/validate', (req, res) => {
     );
 });
 
-app.post('/player/validate/close', function (req, res) {
+app.all('/player/validate/close', function (req, res) {
     res.send('<script>window.close();</script>');
 });
 
-app.get('/', (req, res) => {
-    const tData = {};
-    try {
-        const uData = JSON.stringify(req.body).split('"')[1].split('\\n'); const uName = uData[0].split('|'); const uPass = uData[1].split('|');
-        for (let i = 0; i < uData.length - 1; i++) { const d = uData[i].split('|'); tData[d[0]] = d[1]; }
-        if (uName[1] && uPass[1]) { res.redirect('/player/growid/login/validate'); }
-    } catch (why) { console.log(`Warning: ${why}`); }
+app.all('/', (req, res) => {
 
     res.sendFile(__dirname + '/public/html/dashboard.html');
 });
