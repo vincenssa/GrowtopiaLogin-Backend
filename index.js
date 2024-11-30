@@ -31,7 +31,7 @@ app.all('/player/growid/login/validate', (req, res) => {
     const password = "";
 
     const token = Buffer.from(
-        `\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`,
+        `Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==Cg==`,
     ).toString('base64');
 
     res.send(
