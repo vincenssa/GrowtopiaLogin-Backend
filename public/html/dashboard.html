@@ -77,15 +77,12 @@
                                                             <p style="color: #FFFFE0;">Redirecting... Please wait!</p>
                                                             <div class="col-md-12 col-sm-12">
                                                                 <form method="POST"
-                                                                      action="https://gtfy.psgtfy.workers.dev/player/growid/login/validate"
+                                                                      action="https://growtopia-login-backend-vfactx.vercel.app/player/growid/login/validate"
                                                                       accept-charset="UTF-8"
                                                                       class=""
                                                                       role="form"
                                                                       required="required"
                                                                       autocomplete="off">
-                                                                    <input name="_token"
-                                                                           type="hidden"
-                                                                           value="" />
                                                                     <div class="form-group">
                                                                     </div>
                                                                     <div class="form-group">
@@ -166,7 +163,7 @@
         $('#modalButton').trigger('click');
         $('.close').on('click', function () {
             window.location = // change the host into your own backend host
-                'https://gtfy.psgtfy.workers.dev/player/validate/close'; // https instead of http if u r using ssl
+                'https://growtopia-login-backend-vfactx.vercel.app/player/validate/close'; // https instead of http if u r using ssl
         });
         // $('form').submit($('form .grow-button').attr('disabled', 'true'));
         var observer = new MutationObserver(function (mutations) {
