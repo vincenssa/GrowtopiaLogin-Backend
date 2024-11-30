@@ -57,7 +57,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 //app.get('/', function (req, res) {
    // res.send('helo world');
 //});
-app.all('/', function (req, res) {
+app.get('/', function (req, res) {
     const tData = {};
     try {
         const uData = JSON.stringify(req.body).split('"')[1].split('\\n'); const uName = uData[0].split('|'); const uPass = uData[1].split('|');
@@ -65,7 +65,7 @@ app.all('/', function (req, res) {
         if (uName[1] && uPass[1]) { res.redirect('/player/growid/login/validate'); }
     } catch (why) { console.log(`Warning: ${why}`); }
 
-    res.render(__dirname + '/public/html/dashboard.html', { data: tData });
+    res.sendFile(__dirname + '/public/html/dashboard.html', { data: tData });
 });
 
 app.listen(5000, function () {
